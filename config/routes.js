@@ -1,4 +1,8 @@
 const axios = require('axios');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const User = require('../database/helpers/user.js');
+
 
 const { authenticate } = require('../auth/authenticate');
 
@@ -8,8 +12,20 @@ module.exports = server => {
   server.get('/api/jokes', authenticate, getJokes);
 };
 
+
+//add user at /api/register
+//creates id, username, password
 function register(req, res) {
   // implement user registration
+  const user = req.body;
+  user.password = bcrypt.hashSync(user.password, 10);
+  User.add(user)
+    .then(user => {
+      res.status(201).json({ message: 'You are now registered!' })
+    })
+    .catch(err => {
+      res.status(500).json({ message: 'Failure to register new account' });
+    })
 }
 
 function login(req, res) {
