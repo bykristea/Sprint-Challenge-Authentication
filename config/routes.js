@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../database/helpers/user.js');
 
 
-const { authenticate, generateToken } = require('../auth/authenticate');
+const { authenticate, generateToken } = require('../auth/authenticate.js');
 
 module.exports = server => {
   server.post('/api/register', register);
@@ -28,6 +28,7 @@ function register(req, res) {
     })
 }
 
+
 function login(req, res) {
   // implement user login
 
@@ -37,7 +38,7 @@ function login(req, res) {
     .then(user => {
       if(user && bcrypt.compareSync(credentials.password, user.password)) {
         const token = generateToken(user);
-        res.status(200).json({ message: "You are now logged in"})
+        res.status(200).json({ message:  `Welcome ${user.username}`, token: token})
       } else {
         res.status(401).json({ message: "Invalid username or password"})
       }
