@@ -48,6 +48,7 @@ function login(req, res) {
     })
 }
 
+
 function getJokes(req, res) {
   const requestOptions = {
     headers: { accept: 'application/json' },
