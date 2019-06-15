@@ -24,7 +24,7 @@ In this challenge, you build a real wise-guy application. _Dad jokes_ are all th
 
 Implement an User Authentication System in order to access the jokes from the Jokes API that we want to consume. You will need to ensure that your system uses `bcrypt` for hashing and encrypting your user's passwords, as well as JWT for handling the authorization aspect of the app.
 
-## Self-Study/Essay Questions
+XX ## Self-Study/Essay Questions
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
@@ -37,17 +37,17 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [ X] Create a forked copy of this project.
+- [ X] Add PM as collaborator on Github.
+- [X ] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [ X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [ X] Implement the project on this Branch, committing changes regularly.
+- [ X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] `cd` into the root of the project and run `yarn` to install dependencies.
-- [ ] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
+- [ X] `cd` into the root of the project and run `yarn` to install dependencies.
+- [ X] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
 - [ ] PM then will count the HW as done by  merging the branch back into master.
