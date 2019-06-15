@@ -1,7 +1,4 @@
-const knex = require('knex');
-const dbConfig = require('../../knexfile.js');
-
-const db = knex(dbConfig.development);
+const db = require('../dbConfig.js');
 
 
 // helper function that inserts user upon registration

@@ -31,6 +31,8 @@ function register(req, res) {
 
 function login(req, res) {
   // implement user login
+  //compares password entered with hashed password. 
+  //return welcome message with stored token
 
   const credentials = req.body;
 
