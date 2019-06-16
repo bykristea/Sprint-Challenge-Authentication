@@ -34,11 +34,12 @@ function login(req, res) {
   //compares password entered with hashed password. 
   //return welcome message with stored token
 
-  const credentials = req.body;
+  let { username, password } = req.body;
 
-  User.logIn(credentials.username)
+  User.findBy({username})
+    .first()
     .then(user => {
-      if(user && bcrypt.compareSync(credentials.password, user.password)) {
+      if(user && bcrypt.compareSync(password, user.password)) {
         const token = generateToken(user);
         res.status(200).json({ message:  `Welcome ${user.username}`, token: token})
       } else {
