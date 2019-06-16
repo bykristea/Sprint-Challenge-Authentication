@@ -24,7 +24,7 @@ class Signup extends React.Component {
 			})
 
 			localStorage.setItem('token', result.data.token)
-			this.props.history.push('/jokes')
+			this.props.history.push('/login')
 		} catch (err) {
 			console.error(err)
 		}
