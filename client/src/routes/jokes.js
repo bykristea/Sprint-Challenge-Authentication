@@ -4,12 +4,12 @@ import withAuth from '../helpers/auth'
 
 class Jokes extends React.Component {
 	state = {
-		users: [],
+		jokes: [],
 	}
 
 	async componentDidMount() {
 		try {
-			const result = await api.get('/users')
+			const result = await api.get('/jokes')
 
 			this.setState({
 				users: result.data,
@@ -22,7 +22,7 @@ class Jokes extends React.Component {
 	render() {
 		return (
 			<>
-				<h3>Users</h3>
+				<h3>Knock, Knock...</h3>
 
 				<ul>
 					<li>Jokes</li>

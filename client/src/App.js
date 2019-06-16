@@ -18,7 +18,7 @@ class App extends React.Component {
         <ul>
           <li><NavLink to="/login">Login</NavLink></li>
           <li><NavLink to="/signup">Signup</NavLink></li>
-          <li><NavLink to="/users">Jokes</NavLink></li>
+          <li><NavLink to="/jokes">Jokes</NavLink></li>
           <li><button onClick={this.logout}>Logout</button></li>
         </ul>
 
