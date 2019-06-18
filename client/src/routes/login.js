@@ -2,6 +2,10 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import api from '../helpers/api'
 
+/* POST to api/login
+after log in routes api/jokes
+*/
+
 class Login extends React.Component {
 	state = {
 		username: '',

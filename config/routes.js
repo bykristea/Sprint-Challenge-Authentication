@@ -12,9 +12,11 @@ module.exports = server => {
   server.get('/api/jokes', authenticate, getJokes);
 };
 
-
-//add user at /api/register
-//creates id, username, password
+/*
+POST-> add user at route->
+/api/register
+creates id, username(string), password(string)
+*/
 function register(req, res) {
   // implement user registration
   const credentials = req.body;
@@ -30,10 +32,12 @@ function register(req, res) {
 
 
 function login(req, res) {
-  // implement user login
-  //compares password entered with hashed password. 
-  //return welcome message with stored token
-
+  /*
+  implement user login POST ->
+  Route -> api/login
+  compares password entered with hashed password. 
+  return welcome message with stored token
+*/
   let { username, password } = req.body;
 
   User.findBy({username})
@@ -51,7 +55,9 @@ function login(req, res) {
     })
 }
 
-
+/*
+  GET request -> route api/jokes
+*/
 function getJokes(req, res) {
   const requestOptions = {
     headers: { accept: 'application/json' },

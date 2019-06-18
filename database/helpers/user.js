@@ -1,7 +1,7 @@
 const db = require('../dbConfig.js');
 
 
-// helper function that inserts user upon registration
+// helper functions for login, register etc.
 module.exports = {
     add,
     find,

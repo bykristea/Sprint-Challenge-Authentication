@@ -2,9 +2,14 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import api from '../helpers/api';
 
+/* Sign Up 
+POST
+Username and Password Required. 
+After submit redirects to login page
+*/
+
 class Signup extends React.Component {
 	state = {
-		// fullname: '',
 		username: '',
 		password: '',
 	}
